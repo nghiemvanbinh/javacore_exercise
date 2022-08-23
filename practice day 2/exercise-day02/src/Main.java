@@ -1,164 +1,189 @@
-import java.lang.Math;
-import java.util.Scanner;
-import java.util.Random;
-
+import java.lang.String;
 public class Main {
-    public static void convertFahrenheittoCelsius() {
-        double c;
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("ex2:Nhap vao do F can doi: ");
-        double f = scanner.nextDouble();
-        c = ( (double) 5 / 9) * (f - 32);
-        System.out.println("ex2:Voi nhiet do: " + f + "do F, nhiet do c tuong ung la: " + c);
-    }
-
-    public static void sumofdigits(){
-        int sum, sumSum = 0;
-        Random rand = new Random();
-        int ranNum = rand.nextInt(1000) + 1;
-        System.out.println("ex4: So ngau nhien tao ra la: " + ranNum);
-        while (ranNum > 0) {
-            sum = ranNum % 10;
-            ranNum = ranNum / 10;
-            sumSum = sumSum + sum;
-        }
-        System.out.println("ex4: Sum cac chu so la: " + sumSum);
-    }
-
-    public static boolean twoInt() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("ex5:Nhap vao so thu 1: ");
-        int Num1 = scanner.nextInt();
-        // -----------------------------------//
-        System.out.println("ex5:Nhap vao so thu 2: ");
-        int Num2 = scanner.nextInt();
-        // -----------------------------------//
-        if (Num1 == 10 || Num2 == 10 || (Num1 - Num2) == 10 || (Num1 + Num2) == 10) {
-            return true;
-        }
-        return false;
-    }
-
-    public static double BMI() {
-        double bmi;
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("ex6:Nhap vao chieu cao cua ban(m) : ");
-        double height = scanner.nextDouble();
-        if (height <= 0) {
-            System.out.println("Ban da nhap sai chieu cao");
-            return 0;
-        }
-        System.out.println("ex6:Nhap vao can nang cua ban(kg): ");
-        double weight = scanner.nextDouble();
-        // -----------------------------------//
-        return bmi = weight / (height * height);
-    }
-
-    public static void digitbreak() {
-        int middle;
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("ex8:Nhap vao so co 6 chu so: ");
-        int Num = scanner.nextInt();
-        Num = Math.abs(Num);
-        if (Num <= 999999) {
-            System.out.println(Num);
-            System.out.println("ex8: Day so sau khi tach la:");
-            for (int i = 5; i >= 0; i--) {
-                System.out.print(" " + (Num / (int) Math.pow(10, i)) % 10);
+    public static  void numberPyramid(){
+        int j = 0,k=1;
+        System.out.println("---------ex3----------");
+        for(int i = 1;i<=4;i++){
+            j=1;
+            while (j <= i){
+                System.out.print(k);
+                j++;
             }
-        } else {
-            System.out.println("ex8:Bạn đã nhập hơn 6 chữ số rồi");
+            k = j;
+            System.out.println("");
         }
     }
-    public static void number() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println();
-        System.out.println("ex9:Nhập vào kiểu số thực bạn muốn: ");
-        double f = scanner.nextDouble();
-        System.out.println("ex9:số trả về lớn hoặc nhỏ hơn ngẫu nhiên là:" + (f + Math.random()));
-    }
-
-    public static void random_ex10() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("ex10:Nhập vào giới hạn dưới bạn muốn: ");
-        int Num1 = scanner.nextInt();
-        System.out.println("ex10:Nhập vào giới hạn trên bạn muốn: ");
-        int Num2 = scanner.nextInt();
-        if (Num2 - Num1 > 0) {
-            Random rd = new Random(); // khai báo 1 đối tượng Random
-            int ranNum = rd.nextInt((Num2 - Num1)) + Num1;
-            System.out
-                    .println("ex10:Số ngẫu nhiên sinh ra trong khoảng từ " + Num1 + " tới " + Num2 + " là :" + ranNum);
-        } else {
-            System.out.println("ex10:Bạn đã nhập sai");
+    public static void numberTriangle(){
+        int k =0,j;
+        System.out.println("-------ex4--------");
+        for (int i = 0; i < 5; i++) {
+            j=0;
+            while (j<=i){
+                System.out.print(++k +" ");
+                j++;
+            }
+            System.out.println("");
         }
     }
 
-    public static void time_ex11() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("ex11:Nhập vào số giờ bạn muốn(hour):");
-        int hour = scanner.nextInt();
-        System.out.println("ex11:Số ngày là " + (hour / 24) + " -- Số năm là: " + (hour / 8760));
-        System.out.println("ex11:Nhập vào số phút bạn muốn(minute):");
-        long minute = scanner.nextLong();
-        System.out.println("ex11:Số ngày là " + (minute / 1440) + " -- Số năm là: " + (minute / 527040));
-        System.out.println("ex11:Nhập vào số giây bạn muốn(seconds):");
-        long seconds = scanner.nextLong();
-        System.out.println("ex11:Số ngày là " + (seconds / 3600) + " -- Số năm là: " + (seconds / 31622400));
-
+    public static void diamond() {
+        for (int i = 0; i < 13; i++) {
+            for (int j = 0; j < 13; j++) {
+                if (j >= Math.abs(6 - i) && j <= 12 - Math.abs(i - 6)) {
+                    System.out.print("*");
+                } else {
+                    System.out.print(" ");
+                }
+            }
+            System.out.println("");
+        }
     }
 
+    public static void pascalTriangle() {
+        int trungGian = 1;
+        System.out.println("--------ex6-----");
+        for (int i = 0; i < 5; i++) {
+            for (int j = 0; j <= 5 - i; j++) {
+                System.out.print(" ");
+            }
+            for (int k = 0; k <= i; k++) {
+                if (k == 0 || i == 0)
+                    trungGian = 1;
+                else
+                    trungGian = trungGian * (i - k + 1) / k;
+                System.out.print(" " + trungGian);
+            }
+            System.out.println("");
+        }
+    }
+    public static void invertedTriangle(){
+        System.out.println("-------------ex7--------------");
+        for(int i=0;i<6;i++){
+            for(int j=0;j<6;j++){
+                if(j>=i){
+                    System.out.print("*");
+                }
+                else{
+                    System.out.print(" ");
+                }
+            }
+            System.out.println();
+        }
+    }
+    public static void rightTriangle(){
+        System.out.println("-------------ex8--------------");
+        for(int i=0;i<6;i++){
+            for(int j=0;j<=6;j++){
+                if(j>=(6-i)){
+                    System.out.print("@");
+                }
+                else{
+                    System.out.print(" ");
+                }
+            }
+            System.out.println();
+        }
+    }
+    public static void diamondRhombus() {
+        System.out.println("--------------ex9----------------");
+        for (int i = 0; i < 13; i++) {
+            for (int j = 0; j < 13; j++) {
+                if (j >= Math.abs(6 - i) && j <= 12 - Math.abs(i - 6)) {
+                    if(j==6){
+                        System.out.print(1);
+                    }
+                    else{
+                        System.out.print(Math.abs(6-j)+1);
+                    }
+                } else {
+                    System.out.print(" ");
+                }
+            }
+            System.out.println("");
+        }
+        /*---------------------*/
+        System.out.println("------------------------------");
+        char c = 65;
+        char k=0;
+        for (int i = 0; i < 13; i++) {
+            for (int j = 0; j < 13; j++) {
+                if (j >= Math.abs(6 - i) && j <= 12 - Math.abs(i - 6)) {
+                    if (j == 6) {
+                        c = 65;
+                        c = (char) (c + 6 - Math.abs(6 - i));
+                        System.out.print(c);
+                    } else {
+                        System.out.print((char) (k - Math.abs(6 - j)));
+                    }
+                } else {
+                    System.out.print(" ");
+                }
+            }
+            if(i >=6){
+               k =(char) (c-1);
+            }
+            else {
+                k = (char)(c + 1);
+            }
+            System.out.println("");
+        }
+    }
     public static void main(String[] args) {
-        /* Begin ex1 */
-        int i, n;
-        i = 10;
-      //  System.out.println("ex1:số i là: " + i++);
-        n = ++i % 5;
+//        for (int i = 1; i <= 100; i++) {
+//            if (i % 3 == 0 && i % 5 == 0) {
+//                System.out.print("FizzBuzz" + " ");
+//            } else if (i % 3 == 0 || i % 5 == 0) {
+//                String str = (i % 3 == 0) ? "Fizz" : "Buzz";
+//                System.out.print("" + str + "");
+//            } else {
+//                System.out.print(" " + i);
+//            }
+//        }
 
-        // Nếu i++ biến i giữ nguyên giá trị ban đầu của nó, nếu ++i biến i tăng lên 1
-        // Đơn vị rồi mới thực hiện phép tính(i=11, n=1)
-        System.out.println("ex1:số i là: " + i);
-        System.out.println("ex1:số n là: " + n);
-        /* End ex1 */
-        /*----------------------*/
-        /* Begin ex2 */
-        convertFahrenheittoCelsius();
-        /* End ex2 */
-        /*-----------------------*/
-        /* Begin ex3 */
-        double d =  9f/ 5f;//
-        System.out.println("ex3:Giá trị sau ép kiểu :" + d);
-        /* End ex3 */
-        /*-----------*/
-        /* Begin ex4 */
-        sumofdigits();
-        /* End ex4 */
-        /*-----------*/
-        /* Begin ex5 */
-        System.out.println("ex5: Giá trị trả về là: " + twoInt());
-        /* End ex5 */
-        /*-----------*/
-        /* Begin ex6 */
-        System.out.println("ex6: Giá trị bmi của bạn là: " + BMI());
-        /* End ex6 */
-        /*-----------*/
-        /* Begin ex7 */
-        System.out.print("ex7:Thời gian millis hiện tại là  ");
-        System.out.println(System.currentTimeMillis());
-        /* End ex7 */
-        /* Begin ex8 */
-        digitbreak();
-        /* End ex8 */
-        /*-----------------*/
-        /* Begin ex9 */
-        number();
-        /* End ex9 */
-        /*-----------------*/
-        /* Begin ex10 */
-        random_ex10();
-        /* End ex10 */
-        /* Begin ex11 */
-        time_ex11();
-        /* End ex11 */
+        /*---------------ex1-----------------*/
+        System.out.println("ex1");
+        for (int i = 1; i < 6; i++) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print(j);
+            }
+            System.out.println("");
+        }
+        System.out.println("------end-ex1-------");
+        /*-------------end-ex1----------------*/
+
+        /*---------------ex2----------------*/
+        System.out.println("ex2");
+        int k =0,j;
+        for (int i = 0; i < 4; i++) {
+            j=0;
+           while (j<=i){
+               System.out.print(++k);
+               j++;
+           }
+           System.out.println("");
+        }
+        /*-------------end-ex2--------------*/
+        /*---------------ex3----------------*/
+          numberPyramid();
+        /*--------------end-ex3-------------*/
+
+        /*-------------ex4--------------*/
+        numberTriangle();
+        /*---------------end-ex4----------------*/
+        /*--------------ex5-------------*/
+        System.out.println("----------ex5----------");
+         diamond();
+        /*-------------end-ex5--------------*/
+        /*---------------ex6-------------*/
+        pascalTriangle();
+        /*--------------end-ex6-------------*/
+
+        /*---------------ex7-------------*/
+        invertedTriangle();
+        /*--------------end-ex7-------------*/
+        /*--------------ex8-------------*/
+        rightTriangle();
+        /*--------------end-ex8-------------*/
+        diamondRhombus();
     }
 }

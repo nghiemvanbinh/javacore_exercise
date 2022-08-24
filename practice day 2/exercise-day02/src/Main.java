@@ -1,11 +1,12 @@
 import java.lang.String;
+
 public class Main {
-    public static  void numberPyramid(){
-        int j = 0,k=1;
+    public static void numberPyramid() {
+        int j = 0, k = 1;
         System.out.println("---------ex3----------");
-        for(int i = 1;i<=4;i++){
-            j=1;
-            while (j <= i){
+        for (int i = 1; i <= 4; i++) {
+            j = 1;
+            while (j <= i) {
                 System.out.print(k);
                 j++;
             }
@@ -13,13 +14,14 @@ public class Main {
             System.out.println("");
         }
     }
-    public static void numberTriangle(){
-        int k =0,j;
+
+    public static void numberTriangle() {
+        int k = 0, j;
         System.out.println("-------ex4--------");
         for (int i = 0; i < 5; i++) {
-            j=0;
-            while (j<=i){
-                System.out.print(++k +" ");
+            j = 0;
+            while (j <= i) {
+                System.out.print(++k + " ");
                 j++;
             }
             System.out.println("");
@@ -43,7 +45,7 @@ public class Main {
         int trungGian = 1;
         System.out.println("--------ex6-----");
         for (int i = 0; i < 5; i++) {
-            for (int j = 0; j <= 5 - i; j++) {
+            for (int j = 0; j < 5 - i; j++) {
                 System.out.print(" ");
             }
             for (int k = 0; k <= i; k++) {
@@ -56,44 +58,44 @@ public class Main {
             System.out.println("");
         }
     }
-    public static void invertedTriangle(){
+
+    public static void invertedTriangle() {
         System.out.println("-------------ex7--------------");
-        for(int i=0;i<6;i++){
-            for(int j=0;j<6;j++){
-                if(j>=i){
+        for (int i = 0; i < 6; i++) {
+            for (int j = 0; j < 6; j++) {
+                if (j >= i) {
                     System.out.print("*");
-                }
-                else{
+                } else {
                     System.out.print(" ");
                 }
             }
             System.out.println();
         }
     }
-    public static void rightTriangle(){
+
+    public static void rightTriangle() {
         System.out.println("-------------ex8--------------");
-        for(int i=0;i<6;i++){
-            for(int j=0;j<=6;j++){
-                if(j>=(6-i)){
+        for (int i = 0; i < 6; i++) {
+            for (int j = 0; j <= 6; j++) {
+                if (j >= (6 - i)) {
                     System.out.print("@");
-                }
-                else{
+                } else {
                     System.out.print(" ");
                 }
             }
             System.out.println();
         }
     }
+
     public static void diamondRhombus() {
         System.out.println("--------------ex9----------------");
         for (int i = 0; i < 13; i++) {
             for (int j = 0; j < 13; j++) {
                 if (j >= Math.abs(6 - i) && j <= 12 - Math.abs(i - 6)) {
-                    if(j==6){
+                    if (j == 6) {
                         System.out.print(1);
-                    }
-                    else{
-                        System.out.print(Math.abs(6-j)+1);
+                    } else {
+                        System.out.print(Math.abs(6 - j) + 1);
                     }
                 } else {
                     System.out.print(" ");
@@ -104,7 +106,7 @@ public class Main {
         /*---------------------*/
         System.out.println("------------------------------");
         char c = 65;
-        char k=0;
+        char k = 0;
         for (int i = 0; i < 13; i++) {
             for (int j = 0; j < 13; j++) {
                 if (j >= Math.abs(6 - i) && j <= 12 - Math.abs(i - 6)) {
@@ -119,26 +121,26 @@ public class Main {
                     System.out.print(" ");
                 }
             }
-            if(i >=6){
-               k =(char) (c-1);
-            }
-            else {
-                k = (char)(c + 1);
+            if (i >= 6) {
+                k = (char) (c - 1);
+            } else {
+                k = (char) (c + 1);
             }
             System.out.println("");
         }
     }
+
     public static void main(String[] args) {
-//        for (int i = 1; i <= 100; i++) {
-//            if (i % 3 == 0 && i % 5 == 0) {
-//                System.out.print("FizzBuzz" + " ");
-//            } else if (i % 3 == 0 || i % 5 == 0) {
-//                String str = (i % 3 == 0) ? "Fizz" : "Buzz";
-//                System.out.print("" + str + "");
-//            } else {
-//                System.out.print(" " + i);
-//            }
-//        }
+        // for (int i = 1; i <= 100; i++) {
+        // if (i % 3 == 0 && i % 5 == 0) {
+        // System.out.print("FizzBuzz" + " ");
+        // } else if (i % 3 == 0 || i % 5 == 0) {
+        // String str = (i % 3 == 0) ? "Fizz" : "Buzz";
+        // System.out.print("" + str + "");
+        // } else {
+        // System.out.print(" " + i);
+        // }
+        // }
 
         /*---------------ex1-----------------*/
         System.out.println("ex1");
@@ -153,18 +155,18 @@ public class Main {
 
         /*---------------ex2----------------*/
         System.out.println("ex2");
-        int k =0,j;
+        int k = 0, j;
         for (int i = 0; i < 4; i++) {
-            j=0;
-           while (j<=i){
-               System.out.print(++k);
-               j++;
-           }
-           System.out.println("");
+            j = 0;
+            while (j <= i) {
+                System.out.print(++k);
+                j++;
+            }
+            System.out.println("");
         }
         /*-------------end-ex2--------------*/
         /*---------------ex3----------------*/
-          numberPyramid();
+        numberPyramid();
         /*--------------end-ex3-------------*/
 
         /*-------------ex4--------------*/
@@ -172,7 +174,7 @@ public class Main {
         /*---------------end-ex4----------------*/
         /*--------------ex5-------------*/
         System.out.println("----------ex5----------");
-         diamond();
+        diamond();
         /*-------------end-ex5--------------*/
         /*---------------ex6-------------*/
         pascalTriangle();

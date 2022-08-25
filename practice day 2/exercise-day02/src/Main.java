@@ -14,7 +14,6 @@ public class Main {
             System.out.println("");
         }
     }
-
     public static void numberTriangle() {
         int k = 0, j;
         System.out.println("-------ex4--------");
@@ -42,7 +41,7 @@ public class Main {
     }
 
     public static void pascalTriangle() {
-        int trungGian = 1;
+        int trungGian = 1, t = 0;
         System.out.println("--------ex6-----");
         for (int i = 0; i < 5; i++) {
             for (int j = 0; j < 5 - i; j++) {
@@ -51,9 +50,12 @@ public class Main {
             for (int k = 0; k <= i; k++) {
                 if (k == 0 || i == 0)
                     trungGian = 1;
-                else
+                else {
                     trungGian = trungGian * (i - k + 1) / k;
+
+                }
                 System.out.print(" " + trungGian);
+                // System.out.print("*" + t);
             }
             System.out.println("");
         }
@@ -131,16 +133,7 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        // for (int i = 1; i <= 100; i++) {
-        // if (i % 3 == 0 && i % 5 == 0) {
-        // System.out.print("FizzBuzz" + " ");
-        // } else if (i % 3 == 0 || i % 5 == 0) {
-        // String str = (i % 3 == 0) ? "Fizz" : "Buzz";
-        // System.out.print("" + str + "");
-        // } else {
-        // System.out.print(" " + i);
-        // }
-        // }
+
 
         /*---------------ex1-----------------*/
         System.out.println("ex1");
@@ -187,5 +180,10 @@ public class Main {
         rightTriangle();
         /*--------------end-ex8-------------*/
         diamondRhombus();
+//        String s = "Nghiêm Văn Bình";
+//        for(int i =0; i< s.length();i++){
+//            if(s.charAt(i)=='i')
+//           System.out.println(i);
+//        }
     }
 }

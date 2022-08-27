@@ -57,13 +57,13 @@ public class Main {
                     count++;
                     if (countMax <= count) {
                         if (countMax == count) {
-                            most = most + String.valueOf(str.charAt(i));
+                            most = most+String.valueOf(str.charAt(i));
                         } else {
                             most = "";
                             most = String.valueOf(str.charAt(i));
                             countMax = count;
-                            count = 0;
                         }
+                        count = 0;
                     }
                 }
             }
@@ -91,24 +91,27 @@ public class Main {
         String reverse=" ",reversal=" ";
         int space=0;
         for(int i =0;i< str.length();i++){
-            reverse =  str.charAt(i)+reverse;
+            reverse =  str.charAt(i)+reverse; //
         }
+
         for (int i =0 ;i<reverse.length();i++){
             if(reverse.charAt(i)==' ')
             {
                 String k = reverse.substring(space,i);
                 String kl="";
                 for (int j= 0; j < k.length();j++){
-                 kl =  k.charAt(j)+kl;
-                  //  reversal = k.charAt(j)+reversal;
+                    kl = k.charAt(j)+ kl;
                 }
                 reversal = reversal+kl;
-                reversal = reversal+" ";
+                reversal =  reversal+" ";
                 space = i+1;
             }
         }
         System.out.println("chuỗi sau khi đảo là:"+reversal.substring(1));
     }
+
+
+
     public static void main(String[] args) {
         /*--------ex1------------*/
         repeatCharacer();
@@ -119,6 +122,6 @@ public class Main {
         /*--------ex4------------*/
         mostCharacter();
         /*--------ex5------------*/
-          reverseWord();
+        reverseWord();
     }
 }

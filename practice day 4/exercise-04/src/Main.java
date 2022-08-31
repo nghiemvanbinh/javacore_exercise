@@ -1,8 +1,6 @@
 import java.util.Scanner;
 import java.lang.String;
 public class Main {
-
-
     public static void arrayUser(){
         System.out.println("------------ex1------------");
         Scanner scanner = new Scanner(System.in);
@@ -84,6 +82,56 @@ public class Main {
         }
         System.out.println("Các phân tử xuất hiện trong cả 2 mảng là:"+fil);
     }
+
+    public static void minmaxArray (){
+        System.out.println();
+        System.out.println("------------ex2------------");
+        Scanner scanner = new Scanner(System.in);
+        int n =0;
+        do{
+            System.out.println("Nhập vào số phần tử của mảng:");
+            n = scanner.nextInt();
+        }while (n<=0);
+
+        int Arr[]=new int[n];
+        for(int i = 0;i< n;i++){
+            System.out.println("Mời bạn nhập phần tử thứ:"+i);
+            Arr[i] = scanner.nextInt();
+        }
+        System.out.println("Mảng bạn vừa nhập vào là:");
+        for(int i=0;i<n;i++){
+            System.out.print(Arr[i]+" ");
+        }
+        System.out.println();
+        int max=Arr[0],min=Arr[0];
+        int sum=0;
+        float sumTong;
+        for(int i =0;i<n;i++){
+            if(Arr[i]>max){
+                max = Arr[i];
+            }
+            if(Arr[i]<min){
+                min =Arr[i];
+            }
+
+        }
+
+        for(int i=0;i<n;i++){
+            if(Arr[i]!=max && Arr[i]!=min){
+                sum+= Arr[i];
+            }
+        }
+       // System.out.println(Arr.length);
+        int c=0;
+        for(int i=0;i< n;i++){
+            if(Arr[i] != max && Arr[i]!=min){
+                Arr[c] =Arr[i];
+                c++;
+            }
+        }
+        sumTong =(float) sum / c;
+        System.out.println("Gia tri can la: "+sumTong );
+    }
     public static void main(String[] args) {
 
         /*----------ex1---------*/
@@ -94,5 +142,7 @@ public class Main {
         arrAdd();
         /*-----------ex4---------*/
         arrFilter();
+        /*-----------ex5----------*/
+        minmaxArray();
     }
 }

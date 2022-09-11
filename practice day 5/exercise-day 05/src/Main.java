@@ -6,7 +6,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Nhập thông tin cán bộ cần thêm");
         CanBo cb = new CanBo();
-        System.out.println("Chọn loại cán bộ: 1-Kỹ sư, 2-Nhân viên,3-Công nhân");
+        System.out.println("Chọn loại cán bộ: 1-Kỹ sư,2-Nhân viên,3-Công nhân");
         int choose = scanner.nextInt();
         CanBo canbo = new CanBo();
         switch (choose) {
@@ -51,10 +51,8 @@ public class Main {
         int n = scanner.nextInt();
         ArrayList<CanBo> ListCanBo = new ArrayList<>();
         for (int i =0;i< n;i++){
-
            addCanBo(ListCanBo);
         }
-
         filterCanBo(ListCanBo);
         System.out.println("Thông tin của tất cả các cán bộ là:");
         showInfo(ListCanBo);

@@ -3,7 +3,6 @@ import java.util.Scanner;
 public class CongNhan extends CanBo{
     private int ranks;
 
-
     @Override
     public void inputInfo() {
         Scanner scanner = new Scanner(System.in);
